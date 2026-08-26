@@ -95,7 +95,7 @@ export default function About() {
             className="lg:col-span-2 grid grid-cols-2 gap-4"
           >
             <Stat value="1+" label="Years Experience" />
-            <Stat value="16+" label="Projects Delivered" />
+            <Stat value="30+" label="Projects Delivered" />
             <Stat value="9.93" label="B.Sc. IT CGPI" />
             <Stat value="100%" label="Client Focus" />
           </motion.div>

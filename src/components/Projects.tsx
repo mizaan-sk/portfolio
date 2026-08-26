@@ -5,10 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import SectionHeader from "./SectionHeader";
-import { projects, filters } from "@/data/portfolio";
+import { projects, filters, Project } from "@/data/portfolio";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 type Filter = (typeof filters)[number];
+
+function getFaviconUrl(p: Project): string | null {
+  if (p.favicon) return p.favicon;
+  try {
+    const url = new URL(p.link);
+    return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=64`;
+  } catch {
+    return null;
+  }
+}
 
 export default function Projects() {
   const [active, setActive] = useState<Filter>("All");
@@ -84,7 +94,7 @@ export default function Projects() {
         <SectionHeader
           eyebrow="My recent work"
           title="Featured Projects"
-          description="A selection of 16+ projects spanning corporate websites, conversion-focused landing pages, and full web applications."
+          description="A selection of 30+ projects spanning corporate websites, conversion-focused landing pages, and full web applications."
         />
 
         <div className="projects-filters flex flex-wrap gap-2 mb-10">
@@ -139,14 +149,38 @@ export default function Projects() {
                   <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-accent-gradient flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
                     <ArrowUpRight size={18} className="text-bg-primary" />
                   </div>
-                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-medium bg-bg-primary/70 backdrop-blur border border-accent/20 text-accent">
+                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-medium bg-bg-primary/80 backdrop-blur border border-accent/20 text-accent flex items-center gap-1.5 shadow-sm">
+                    {getFaviconUrl(p) && (
+                      <img
+                        src={getFaviconUrl(p)!}
+                        alt=""
+                        className="w-3.5 h-3.5 object-contain rounded-xs"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLElement).style.display = "none";
+                        }}
+                      />
+                    )}
                     {p.category}
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-text-primary group-hover:text-accent transition-colors">
-                    {p.title}
-                  </h3>
+                  <div className="flex items-center gap-2.5">
+                    {getFaviconUrl(p) && (
+                      <span className="w-6 h-6 rounded-md bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                        <img
+                          src={getFaviconUrl(p)!}
+                          alt={`${p.title} favicon`}
+                          className="w-4 h-4 object-contain"
+                          onError={(e) => {
+                            (e.currentTarget.parentElement as HTMLElement).style.display = "none";
+                          }}
+                        />
+                      </span>
+                    )}
+                    <h3 className="font-semibold text-text-primary group-hover:text-accent transition-colors truncate">
+                      {p.title}
+                    </h3>
+                  </div>
                   {p.description && (
                     <p className="text-sm text-text-secondary mt-2 leading-relaxed line-clamp-2">
                       {p.description}

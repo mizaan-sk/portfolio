@@ -17,8 +17,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Mizaan Shaikh" }],
   openGraph: {
     title: "Mizaan Shaikh — Full Stack Web Developer",
-    description: "Modern portfolio showcasing 16+ projects across websites, landing pages, and web apps.",
+    description: "Modern portfolio showcasing 30+ projects across websites, landing pages, and web apps.",
     type: "website",
+  },
+  icons: {
+    icon: "/icon.svg",
   },
 };
 

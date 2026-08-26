@@ -191,7 +191,7 @@ export default function Hero() {
               <span className="text-xs text-text-secondary">Years</span>
             </FloatingBadge>
             <FloatingBadge className="-bottom-4 -right-4" delay={1.2}>
-              <span className="text-accent font-bold">16+</span>
+              <span className="text-accent font-bold">30+</span>
               <span className="text-xs text-text-secondary">Projects</span>
             </FloatingBadge>
           </div>

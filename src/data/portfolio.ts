@@ -125,18 +125,117 @@ export type Project = {
   image: string;
   link: string;
   description?: string;
+  favicon?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Whispering Waves",
+    title: "Lotus Developers",
     category: "Websites",
-    image: "/images/12.png",
-    link: "https://wellwishergroup.in/",
-    description: "Corporate website with premium UI and CMS-driven content.",
+    image: "/banner/lotus.png",
+    link: "http://72.61.172.34:3061/",
+    description: "Landmark luxury residences and Grade-A commercial developments.",
   },
   {
-    title: "Suraksha Whispering Waves",
+    title: "NSL Luxe",
+    category: "Websites",
+    image: "/banner/nslluxe.png",
+    link: "https://nslluxe.com/",
+    description: "Luxury real estate corporate website showcasing premium developments.",
+  },
+  {
+    title: "JP Group",
+    category: "Websites",
+    image: "/banner/jpgroup.png",
+    link: "https://jpgrp.in/",
+    description: "Real estate & construction developer website with 40+ years legacy.",
+  },
+  {
+    title: "Ratnaakar",
+    category: "Websites",
+    image: "/banner/ratnakar.png",
+    link: "https://ratnaakar.com/",
+    description: "Prominent real estate developers in Ahmedabad offering premium projects.",
+  },
+  {
+    title: "Sumadhura Group",
+    category: "Websites",
+    image: "/banner/sumdhura.png",
+    link: "https://sumadhuragroup.com/",
+    description: "Leading real estate developer in Bengaluru & Hyderabad crafting quality living.",
+  },
+  {
+    title: "Salarpuria Group",
+    category: "Websites",
+    image: "/banner/salarpuria.png",
+    link: "https://www.salarpuriagroup.com/",
+    description: "Renowned real estate group building commercial & residential landmarks.",
+  },
+  {
+    title: "Purvanchal UAE",
+    category: "Websites",
+    image: "/banner/purvanchal.png",
+    link: "https://purvanchaluae.ae/",
+    description: "International real estate developer site with luxury UAE property showcases.",
+  },
+  {
+    title: "Bhavisha Homes",
+    category: "Websites",
+    image: "/banner/bhavisha.png",
+    link: "https://www.bhavishahomes.com/",
+    description: "Residential property website showcasing modern apartments and amenities.",
+  },
+  {
+    title: "VTP Realty",
+    category: "Websites",
+    image: "/banner/vtprealty.png",
+    link: "https://www.vtprealty.in/",
+    description: "Premier Pune real estate developer site featuring residential & commercial hubs.",
+  },
+  {
+    title: "Oriom Group",
+    category: "Websites",
+    image: "/banner/oriomgroup.png",
+    link: "https://www.oriomgroup.com/",
+    description: "Infrastructure and real estate corporate portal with modern UI.",
+  },
+  {
+    title: "Oriom Realty",
+    category: "Websites",
+    image: "/banner/oriomrealty.png",
+    link: "https://oriomrealty.com/",
+    description: "Real estate development and property consulting website.",
+  },
+  {
+    title: "BR Steel & Power",
+    category: "Websites",
+    image: "/banner/brsteel.png",
+    link: "https://brsteelandpower.com/",
+    description: "Industrial corporate website for steel manufacturing and power.",
+  },
+  {
+    title: "Diamond Group",
+    category: "Websites",
+    image: "/banner/diamondgroup.png",
+    link: "https://diamondgroupweb.com/",
+    description: "Real estate corporate website showcasing commercial and residential projects.",
+  },
+  {
+    title: "Avinash Group",
+    category: "Websites",
+    image: "/banner/avinash.png",
+    link: "https://www.avinashgroup.com/",
+    description: "Leading central India real estate developer township portal.",
+  },
+  {
+    title: "Well Wisher",
+    category: "Websites",
+    image: "/banner/wellwisher.png",
+    link: "https://wellwishergroup.in/",
+    description: "Corporate real estate website with luxury project galleries.",
+  },
+  {
+    title: "Whispering Waves",
     category: "Websites",
     image: "/images/11.png",
     link: "https://surakshawhisperingwaves.com/",
@@ -169,6 +268,13 @@ export const projects: Project[] = [
     image: "/images/d.png",
     link: "http://inspirabuilders.com/",
     description: "Builders corporate website with project showcases.",
+  },
+  {
+    title: "Nuvoraa",
+    category: "Websites",
+    image: "/banner/nuvoraa.png",
+    link: "https://www.nuvoraa.com/",
+    description: "Digital agency corporate website featuring responsive UI and web services.",
   },
   {
     title: "Man Matters",
